@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchBlogsWithAuthors() {
       try {
-        const response = await fetch('http://localhost:5000/api/blogs');
+        const response = await fetch('https://blog-now-server.vercel.app/api/blogs');
         if (response.ok) {
           const blogs = await response.json();
   
@@ -18,7 +18,7 @@ export default function Home() {
           const blogsWithAuthors = await Promise.all(
             blogs.map(async (blog) => {
               try {
-                const userResponse = await fetch('http://localhost:5000/api/users/fetchUser', {
+                const userResponse = await fetch('https://blog-now-server.vercel.app/api/users/fetchUser', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',

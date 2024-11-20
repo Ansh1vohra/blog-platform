@@ -9,7 +9,7 @@ export default function ProfilePage() {
     // Fetch user details and blogs
     async function fetchData() {
       try {
-        const userResponse = await fetch('http://localhost:5000/api/users/fetchUser', {
+        const userResponse = await fetch('https://blog-now-server.vercel.app/api/users/fetchUser', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userMail }),
@@ -17,7 +17,7 @@ export default function ProfilePage() {
         const userData = await userResponse.json();
         setAuthorName(userData.authorName);
 
-        const blogsResponse = await fetch(`http://localhost:5000/api/blogs/blogsByUser/${userMail}`);
+        const blogsResponse = await fetch(`https://blog-now-server.vercel.app/api/blogs/blogsByUser/${userMail}`);
         const blogsData = await blogsResponse.json();
         setBlogs(blogsData);
       } catch (error) {
@@ -30,7 +30,7 @@ export default function ProfilePage() {
 
   const handleUpdateAuthorName = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/users/updateAuthorName', {
+      const response = await fetch('https://blog-now-server.vercel.app/api/users/updateAuthorName', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userMail, authorName: newAuthorName }),

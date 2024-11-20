@@ -24,13 +24,13 @@ export default function BlogDetails() {
     // Fetch the specific blog by ID
     async function fetchBlog() {
       try {
-        const response = await fetch(`http://localhost:5000/api/blogs/${id}`);
+        const response = await fetch(`https://blog-now-server.vercel.app/api/blogs/${id}`);
         if (response.ok) {
           const blog = await response.json();
   
           // Fetch the authorName using the blog's userMail
           try {
-            const userResponse = await fetch('http://localhost:5000/api/users/fetchUser', {
+            const userResponse = await fetch('https://blog-now-server.vercel.app/api/users/fetchUser', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

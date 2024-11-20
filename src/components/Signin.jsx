@@ -24,7 +24,7 @@ function Signin({ setUserMail }) {
       const generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
       setGeneratedOtp(generatedOTP);
 
-      const response = await fetch("http://localhost:5000/api/users/sendOTP", {
+      const response = await fetch("https://blog-now-server.vercel.app/api/users/sendOTP", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ function Signin({ setUserMail }) {
 
   async function storeUser() {
     try {
-      const response = await fetch("http://localhost:5000/api/users/fetchUser", {
+      const response = await fetch("https://blog-now-server.vercel.app/api/users/fetchUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +81,7 @@ function Signin({ setUserMail }) {
 
   async function saveNewUser() {
     try {
-      const resp = await fetch("http://localhost:5000/api/users/storeUser", {
+      const resp = await fetch("https://blog-now-server.vercel.app/api/users/storeUser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

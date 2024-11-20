@@ -8,7 +8,7 @@ export default function AuthorProfile() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const response = await fetch(`http://localhost:5000/api/blogs/blogsByAuthor/${authorName}`);
+        const response = await fetch(`https://blog-now-server.vercel.app/api/blogs/blogsByAuthor/${authorName}`);
         const blogsData = await response.json();
         setBlogs(blogsData);
       } catch (error) {
