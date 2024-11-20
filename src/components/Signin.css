@@ -1,0 +1,19 @@
+.bg-offwhite{
+    background-color: #d7ffe4b4;
+}
+
+.SigninCont{
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+}
+
+.SigninCont .formContainer{
+    width: 40vw;
+}
+
+@media only screen and (max-width:500px){
+    .SigninCont .formContainer{
+        width: 90vw;
+    }
+}

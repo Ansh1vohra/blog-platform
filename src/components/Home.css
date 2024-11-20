@@ -1,0 +1,9 @@
+.searchWidth{
+    width: 30vw;
+}
+
+@media (max-width:500px){
+    .searchWidth{
+        width:90vw;
+    }
+}

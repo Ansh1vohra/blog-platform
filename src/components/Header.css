@@ -1,0 +1,22 @@
+.Header{
+    background-color: #01918ad1;
+}
+
+.Header h2{
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+ul li{
+    padding: 0.5rem;
+}
+
+ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color: gray;
+}
